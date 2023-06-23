@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>{% block title %} {% endblock title %} </title>
+  
+  {% load static %}
+</head>
+<body>
+  <div class="navbar">
+    <a class="new-post_btn" href="{% url 'new' %}">새 글 작성하기</a>
+    <br>
+    <a class="home_btn" href="{%url 'home' %}">메인 홈</a>
+  </div>
+  {% block content %}
+    <!-- base.html 상속한 템플릿에서 구현해야 하는 영역 -->
+  {% endblock %}
+  
+</body>
+</html>
